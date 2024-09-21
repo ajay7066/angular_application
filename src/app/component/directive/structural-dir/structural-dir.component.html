@@ -1,0 +1,47 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h1>structural directive</h1>
+    <p>*ngIf, *ngFor</p>
+</div>
+<div class="row p-3">
+    <div class="col-3">
+        <div *ngIf="IsDiv1Visible" class="bg-danger p-3 text-center">
+            <h4>Div-1</h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="isDiv2Visible" class="bg-success p-3 text-center">
+            <h4>Div-2</h4>
+        </div>
+    </div>
+    <div class="col-3">
+        <div *ngIf="num1 == num2" class="bg-secondary p-3 text-center">
+            <h4>Div-3</h4>
+        </div>
+    </div>
+    <div *ngIf="isActive" class="col-3">
+        <div class="bg-primary p-3 text-center">
+            <h4>Div-4</h4>
+        </div>
+    </div>
+</div>
+<div class="row pt-3">
+    <div class="col-3 text-center">
+        <button class="btn btn-warning" (click)="hideDiv1()">Hide</button>&nbsp;
+        <button class="btn btn-primary" (click)="showDiv1()">Show</button>
+    </div>
+    <div class="col-3 text-center">
+        <button class="btn btn-secondary" (click)="toggleDiv2()">Toggle</button>
+    </div>
+    <div class="col-3 text-center">
+        <input type="text" placeholder="Num-1" [(ngModel)]="num1" class="form-control">&nbsp;
+        <input type="text" placeholder="Num-2" [(ngModel)]="num2" class="form-control">
+    </div>
+    <div class="col-3">
+        <input [(ngModel)]="isActive" type="checkbox">&nbsp;
+        <select name="" id="">
+            <option value="">Select State</option>
+            <option value="">Maharashtra</option>
+            <option value="">Goa</option>
+        </select>
+    </div>
+</div>
